@@ -177,10 +177,10 @@ class App extends React.Component {
                 Fast Dispatch
               </div>
             </div>
-            <h1 className="headtitle">
+            <div className="headtitle">
               {items.product.name}
               <div className="flexbox-item-tag">{items.product.tags}</div>
-            </h1>
+            </div>
           </div>
         );
       }
@@ -198,19 +198,32 @@ class App extends React.Component {
       let shipval = null;
       let date = null;
       let time = null;
-      let curdate = null;
-      let imgUrl = null;
-      imgUrl = items.product.gallery["0"].main;
-      curdate = { currentTime: new Date().toLocaleString() };
+      let cdTime = null;
+      
       date = items.product.discount.end_date; //2022-02-19T06:16:04+01:00
       time = new Date(date);
-      console.log(curdate)
       console.log(time);
+
+      let difference = +time - +new Date();
+      let timeLeft = {};
+
+      if (difference > 0) {
+        timeLeft = {
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        };
+      }
+
+      console.log(timeLeft)
+      const values = Object.values(timeLeft);
+      console.log(values);
+      cdTime = values[0]+"d:"+values[1]+"h:"+values[2]+"m:"+values[3]+"s";
+
+
       shiptext =
-        "Ship to  " +
-        items.product.shipping.method.country +
-        "  by  " +
-        items.product.shipping.method.title;
+        <div>Ship to <u> {items.product.shipping.method.country} by {items.product.shipping.method.title}</u></div>
       shipval =
         items.product.shipping.method.cost.currency.symbol +
         "  " +
@@ -220,24 +233,24 @@ class App extends React.Component {
 
       HDprice =
         items.product.options["1080p"].price.currency.symbol +
-        "  " +
+        " " +
         items.product.options["1080p"].price.value;
       Batprice =
         items.product.options.battery_accessories.price.currency.symbol +
-        "  " +
+        " " +
         items.product.options.battery_accessories.price.value;
       QHDprice =
         items.product.options["4k"].price.currency.symbol +
-        "  " +
+        " " +
         items.product.options["4k"].price.value;
 
       lprice =
         items.product.options.battery_accessories.price.currency.symbol +
-        "  " +
+        " " +
         items.product.options.battery_accessories.old_price.value +
-        "  -  " +
+        " - " +
         items.product.options.battery_accessories.price.currency.symbol +
-        "  " +
+        " " +
         items.product.options["4k"].old_price.value;
       revcon = items.product.reviews.count + "     reviews";
       buyercon = items.product.reviews.total_buyers + "        buyers";
@@ -358,21 +371,21 @@ class App extends React.Component {
                   <img className="expo" src={expo} alt={expo}></img>
                 </div>
                 <div className="expo-text">
-                  <ul>
+                  <ul className="expo-bolt1">
                     <li>Free shipping (up to $40)</li>
                   </ul>
                 </div>
-                <div className="expo-text">
-                  <ul>
+                <div className="expo-text2">
+                  <ul className="expo-bolt2">
                     <li>On-time delivery guaranteed</li>
                   </ul>
                 </div>
               </div>
-              <div className="flex-mainbox">
+              <div className="flex-discbox">
                 <div className="orange-disc-text">{disc}</div>
                 <div className="graydisc">Discount ends in</div>
                 <img className="clock" src={clock} alt={clock}></img>
-                <div className="graydisc">{date}</div>
+                <div className="graydisc">{cdTime}</div>
               </div>
 
               <div className="flex-product-col">

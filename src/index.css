@@ -19,8 +19,8 @@ code {
 }
 
 .image {
-  width: 416px;
-  height: 416px;
+  max-width: 416px;
+  max-height: 416px;
 }
 
 body {
@@ -306,6 +306,12 @@ input[type=number] {
 .flex-mainbox {
   display: flex;
   flex-direction: row;
+  max-width: 100%;
+}
+
+.flex-discbox {
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-col-box {
@@ -356,6 +362,14 @@ input[type=number] {
 
 
 .expo-text {
+  color: #FF6600;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.expo-text2 {
   color: #FF6600;
   font-family: 'Roboto';
   font-size: 14px;
@@ -438,6 +452,7 @@ input[type=number] {
 
 .placeholder-space {
   width: 67px;
+  
 }
 
 .login {
@@ -530,4 +545,73 @@ input[type=number] {
   font-family: 'Roboto';
   font-size: 14px;
   margin-top: 5px;
+}
+
+/* Extra small devices (phones, 360px and down) 
+@media only screen and (max-width: 360px) */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) */
+
+@media all and (max-width: 360px) {
+  .flex-mainbox {
+    display: block;
+  }
+  .placeholder-space{
+    width: 0%;
+  }
+  .options-gray {
+    width: 0px;
+    color: #FFFFFF;
+  }
+  
+  .headtitle {
+    max-width: 322px;
+    word-wrap: break-word;
+  }
+  .gray-text-price {
+    margin-left: 3px;
+  }
+  .black-text-price {
+    margin-left: 5px;
+  }
+  .flex-main-title {
+    width: 100%;
+  }
+  .image {
+  width: 360px;
+  height: 360px;
+  }
+  .graydisc {
+    width: 104px;
+    margin-left: 3px;
+  }
+  .orange-disc-text {
+    width: 59px;
+  }
+  .rightflex {
+    align-content: center;
+  }
+  .shipbox {
+    margin-left: 15px;
+  }
+  .expo-box {
+    width: 336px;
+  }
+  
+  ul {
+    margin: 0;
+   padding: 5px;
+  }
+
+  .input {
+    width: 40px;
+    height: 40px;
+  }
+
+  .black-row-item-2 {
+    width: 72px;
+  }
+  
+  
 }
