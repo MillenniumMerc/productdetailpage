@@ -269,7 +269,7 @@ class App extends React.Component {
       switch (x) {
         case (x = 1):
           starcon = (
-            <div>
+            <div className="starline">
               <img className="star" src={star} alt={star}></img>
               {"    "}
             </div>
@@ -277,7 +277,7 @@ class App extends React.Component {
           break;
         case (x = 2):
           starcon = (
-            <div>
+            <div className="starline">
               <img className="star" src={star} alt={star}></img>
               <img className="star" src={star} alt={star}></img>
               {"    "}
@@ -286,7 +286,7 @@ class App extends React.Component {
           break;
         case (x = 3):
           starcon = (
-            <div>
+            <div className="starline">
               <img className="star" src={star} alt={star}></img>
               <img className="star" src={star} alt={star}></img>
               <img className="star" src={star} alt={star}></img>
@@ -296,7 +296,7 @@ class App extends React.Component {
           break;
         case (x = 4):
           starcon = (
-            <div>
+            <div className="starline">
               <img className="star" src={star} alt={star}></img>
               <img className="star" src={star} alt={star}></img>
               <img className="star" src={star} alt={star}></img>
@@ -307,7 +307,7 @@ class App extends React.Component {
           break;
         case (x = 5):
           starcon = (
-            <div>
+            <div className="starline">
               <img className="star" src={star} alt={star}></img>
               <img className="star" src={star} alt={star}></img>
               <img className="star" src={star} alt={star}></img>
@@ -354,7 +354,7 @@ class App extends React.Component {
                   <div className="orangeText">{olprice}</div>
                   <div className="gray-text-price">/ option</div>
                   <div className="black-text-price">2 Options</div>
-                  <div className="gray-text-price">(Min.Order)</div>
+                  <div className="gray-text-price1">(Min.Order)</div>
                 </div>
                 <div className="under-strike-price">{lprice}</div>
               </div>

@@ -40,6 +40,13 @@ body {
   text-align: end;
   margin-left: 4px;
   padding-top: 3px;
+  width: 17px;
+  height: 16px;
+}
+
+.starline {
+  width: 86px;
+  height: 14px;
 }
 
 .review-text {
@@ -49,12 +56,14 @@ body {
   font-size: 12px;
   text-align: end;
   padding-top: 3px;
+  min-width: 54px;
 }
 
 .buyer-text {
   margin-left: 16px;
   font-family: 'Roboto';
   font-size: 12px;
+  min-width: 53px;
   text-align: end;
   color: #333333;
   padding-top: 3px;
@@ -116,6 +125,7 @@ body {
   line-height: 16px;
   text-align: left;
   margin-left: 10px;
+  min-width: 107px;
 }
 
 .rightflex {
@@ -130,6 +140,7 @@ body {
   line-height: 16px;
   text-align: left;
   margin-left: 5px;
+  width: 181px;
 }
 
 .taggroup {
@@ -265,6 +276,16 @@ input[type=number] {
   font-size: 14px;
   padding-top: 3px;
   width: 51px;
+  height: 16px;
+}
+
+.gray-text-price1 {
+  margin-left: 14px;
+  color: #999999;
+  font-family: 'Roboto';
+  font-size: 14px;
+  padding-top: 3px;
+  width: 72px;
   height: 16px;
 }
 
