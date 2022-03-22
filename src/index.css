@@ -69,6 +69,7 @@ body {
   width: 526px;
   text-align: left;
   margin-top: 0px;
+  flex-wrap: wrap;
 }
 
 
@@ -263,6 +264,8 @@ input[type=number] {
   font-family: 'Roboto';
   font-size: 14px;
   padding-top: 3px;
+  width: 51px;
+  height: 16px;
 }
 
 .under-strike-price {
@@ -280,6 +283,7 @@ input[type=number] {
   font-family: 'Roboto';
   font-size: 14px;
   padding-top: 3px;
+  width: 64px;
 }
 
 .flexbox-item-tag {
@@ -292,6 +296,8 @@ input[type=number] {
   height: 20px;
   text-align: center;
   line-height: 20px;
+  display: inline-block;
+  margin-left: 5px;
 }
 
 .flex-product-col {
@@ -400,13 +406,14 @@ input[type=number] {
   line-height: 24px;
   text-align: left;
   font-weight: bold;
+  width:135px;
 }
 
 .options-gray {
   color: #999999;
   font-family: 'Roboto';
   font-size: 14px;
-  width: 67px;
+  width: 112px;
   line-height: 40px;
 }
 
@@ -433,8 +440,9 @@ input[type=number] {
   font-size: 14px;
   line-height: 40px;
   text-align: left;
-  width: 117px;
+  width: 56px;
   font-weight: bold;
+  margin-right: 10px;
 }
 
 .button-row {
@@ -451,7 +459,7 @@ input[type=number] {
 }
 
 .placeholder-space {
-  width: 67px;
+  width: 112px;
   
 }
 
@@ -547,6 +555,13 @@ input[type=number] {
   margin-top: 5px;
 }
 
+.ifor {
+  display: none;
+  opacity: 0;
+}
+
+
+
 /* Extra small devices (phones, 360px and down) 
 @media only screen and (max-width: 360px) */
 
@@ -599,10 +614,7 @@ input[type=number] {
     width: 336px;
   }
   
-  ul {
-    margin: 0;
-   padding: 5px;
-  }
+  
 
   .input {
     width: 40px;
@@ -610,8 +622,31 @@ input[type=number] {
   }
 
   .black-row-item-2 {
-    width: 72px;
+    width: 58px;
+    min-width: 56px;
+  }
+
+  .black-row-item {
+    width: 127px;
+  }
+
+  .expo-text2 {
+    opacity: 0;
+    width: 0px;
+    display: none;
+  }
+
+  .button-row {
+    width: 130px;
+  }
+
+  .ifor {
+    display: inline;
+    opacity: 100;
+    margin-top: 7px;
+    margin-left: 15px;
   }
   
+
   
 }

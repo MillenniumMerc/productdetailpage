@@ -10,6 +10,7 @@ import clock from "./clock.png";
 import envelope from "./envelope.png";
 import info from "./info.png";
 import ok from "./ok.png";
+import iforward from "./iforward.png";
 import { ReactComponent as Mcard } from "./mcard.svg";
 import { ReactComponent as Secure } from "./Secure.svg";
 import { ReactComponent as Visa } from "./visa.svg";
@@ -379,6 +380,9 @@ class App extends React.Component {
                   <ul className="expo-bolt2">
                     <li>On-time delivery guaranteed</li>
                   </ul>
+                </div>
+                <div className="ifor">
+                  <img className="ifor" src={iforward} alt={iforward}></img>
                 </div>
               </div>
               <div className="flex-discbox">
